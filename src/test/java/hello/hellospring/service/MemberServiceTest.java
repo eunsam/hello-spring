@@ -10,8 +10,11 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class MemberServiceTest {
 
-    MemberService memberService = new MemberService();
+    private final MemberService memberService;
 
+    public MemberServiceTest(MemberService memberService) {
+        this.memberService = memberService;
+    }
 
     @Test
     void 회원가입() {
